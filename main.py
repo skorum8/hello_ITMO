@@ -2,12 +2,12 @@
 подстроку начиная с 6 символа с начала исходной строки и до 7 символа с конца исходной
 строки (нумерация символов начинается с нуля).'''
 s = 'Python is the best programming language in the world'
-s = s[6:8]
+s = s[5:-7]
 print(s)
 
 '''2) Вывести каждый третий символа строки «Guido van Rossum is the benevolent dictator for life».'''
 s = 'Guido van Rossum is the benevolent dictator for life'
-print(s[::3])
+print(s[2::3])
 
 '''4) Из строки «You have a problem with authority, Mr. Anderson.» получить словарь, где ключ -это символ, 
 а значение - это количество повторений символа в строке.
@@ -29,4 +29,3 @@ u = list( zip(s, t))
 ##print(u)
 v = dict(u)
 print(v)
- #git
