@@ -21,7 +21,8 @@ import csv
 user_request = dict() #словарь-содержание запроса пользователя
 parameters = list() #заголовок csv файла для записи ответа
 with open('steam.csv', mode='r', encoding = 'utf-8-sig') as file:
-    for parameter in file.readline().rstrip('\n').split(','): #rstrip('\n') - убирает символ конца строки \n в конце строки
+    for parameter in file.readline().rstrip('\n').split(','): 
+        #rstrip('\n') - убирает символ конца строки \n в конце строки
         parameters.append(parameter)
         user_request[parameter] = input(f'input desired "{parameter}": ')
 print('===========================')
@@ -38,7 +39,7 @@ with open('steam.csv', mode='r', encoding = 'utf-8-sig', newline='') as src_csv_
         r_flag = True
         for parameter in user_request.keys():
             print(f'Searching "{user_request[parameter].lower()}" in /{parameter} : "{row[parameter].lower()}"/')
-            if (user_request[parameter].lower() in row[parameter].lower()): #.lower() - для совпадения регистров строк
+            if (user_request[parameter].lower() in row[parameter].lower()): #.lower() - для совпадения регистров
                 print('Match!')
             else:
                 print(f'MISMATCH, going to next candidate!')
